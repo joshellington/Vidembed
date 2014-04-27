@@ -1,0 +1,38 @@
+{
+	"name": "vidembed",
+	"title": "Vidembed",
+	"description": "Embed YouTube, Vimeo and Instagram videos with just a link.",
+	"keywords": [
+		"jquery",
+		"youtube",
+		"vimeo",
+		"instagram",
+		"plugins"
+	],
+	"version": "0.1",
+	"author": {
+		"name": "Josh Ellington",
+		"email": "hello@joshellington.com",
+		"url": "http://joshellington.com"
+	},
+	"maintainers": [
+		{
+			"name": "Josh Ellington",
+			"email": "hello@joshellington.com",
+			"url": "https://github.com/joshellington"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/jquery-boilerplate/boilerplate/issues",
+	"homepage": "http://github.com/joshellington/Vidembed",
+	"docs": "http://github.com/joshellington/Vidembed#readme",
+	"download": "http://github.com/joshellington/Vidembed/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
