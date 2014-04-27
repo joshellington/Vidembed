@@ -38,9 +38,6 @@ Stop using random Regex's on each project to parse out YouTube, Vimeo and Instag
 	});
 	```
 
-
-```
-
 ## License
 
-[MIT License](http://zenorocha.mit-license.org/)
+[MIT License](http://mit-license.org/)
