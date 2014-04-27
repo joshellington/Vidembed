@@ -1,18 +1,18 @@
 {
-	"name": "jquery-boilerplate",
-	"version": "3.3.3",
-	"homepage": "http://jqueryboilerplate.com",
+	"name": "vidembed",
+	"version": "0.1",
+	"homepage": "http://github.com/joshellington/Vidembed",
 	"authors": [
-		"Zeno Rocha <hi@zenorocha.com>"
+		"Josh Ellington <hello@joshellington.com>"
 	],
-	"description": "A jump-start for jQuery plugins development.",
-	"main": "src/jquery.boilerplate.js",
+	"description": "Embed YouTube, Vimeo and Instagram videos with just a link.",
+	"main": "src/jquery.vidembed.js",
 	"keywords": [
 		"jquery",
-		"plugin",
-		"boilerplate",
-		"jquery-plugin",
-		"jquery-boilerplate"
+		"youtube",
+		"vimeo",
+		"instagram",
+		"plugins"
 	],
 	"license": "MIT"
 }
