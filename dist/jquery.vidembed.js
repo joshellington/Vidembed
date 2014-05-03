@@ -95,7 +95,7 @@
     parseVimeo: function (href) {
       // console.log(this.element, href);
 
-      var p = /http:\/\/(www\.)?vimeo.com\/(\d+)($|\/)/,
+      var p = /http(s)?:\/\/(www\.)?vimeo.com\/(\d+)($|\/)/,
           videoId = (href.match(p)) ? RegExp.$2 : false,
           embed = "//player.vimeo.com/video/"+videoId;
 
