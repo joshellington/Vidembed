@@ -122,21 +122,16 @@
           &href="+encodeURIComponent(photoUrl)+"\
           &sdk=joey&width="+this.settings[this.settings.service].width;
 
-      // console.log(videoId);
+      console.log(videoId);
       this.render(embed);
     },
 
-    getQueryVariable: function (string, variable) {
-      var vars = string.split("&"),
-          i = 0;
-      
-      for (i;i<vars.length;i++) {
-        if (vars[i].split("=")[0] === variable) {
-          return pair[1];
-        }
-      }
+    getQueryVariable: function(string, name) {
+      var paramName = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]"),
+          regex = new RegExp("[\\?&]" + paramName + "=([^&#]*)"),
+          results = regex.exec(string);
 
-      return(false);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     },
 
     render: function(embed) {
