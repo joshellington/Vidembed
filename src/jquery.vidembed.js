@@ -31,6 +31,11 @@
     facebook: {
       width: 466,
       height: 480
+    },
+    soundcloud: {
+      width: "100%",
+      height: 450,
+      autoplay: false
     }
   };
 
@@ -74,6 +79,9 @@
         } else if (href.indexOf("facebook") !== -1) {
           this.settings.service = "facebook";
           this.parseFacebook(href);
+        } else if (href.indexOf("soundcloud") !== -1) {
+          this.settings.service = "soundcloud";
+          this.parseSoundcloud(href);
         }
       } else {
         console.error("Missing href value.");
@@ -122,7 +130,16 @@
           &href="+encodeURIComponent(photoUrl)+"\
           &sdk=joey&width="+this.settings[this.settings.service].width;
 
-      console.log(videoId);
+      // console.log(videoId);
+      this.render(embed);
+    },
+
+    parseSoundcloud: function (href) {
+      // <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147451459&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+
+      var embed = "https://w.soundcloud.com/player/?url="+encodeURIComponent(href)+"&auto_play="+this.settings[this.settings.service].autoplay+"&hide_related=true&visual=true";
+
+      console.log(embed);
       this.render(embed);
     },
 
