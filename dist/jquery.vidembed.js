@@ -118,7 +118,7 @@
         var iframe = "<iframe src='"+embed+"' width='"+this.settings[this.settings.service].width+"' height='"+this.settings[this.settings.service].height+"' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen scrolling='no' allowtransparency='true'></iframe>";
         $(this.element).replaceWith(iframe);
       } else {
-        $(this.element).attr("data-embed", embed);
+        $(this.element).attr("data-embed", embed).attr("data-embed-width", this.settings[this.settings.service].width).attr("data-embed-height", this.settings[this.settings.service].height);
       }
     }
   };
