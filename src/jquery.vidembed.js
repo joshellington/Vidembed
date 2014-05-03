@@ -116,8 +116,11 @@
       // console.log(this.element, href);
 
       var channelSdk = "http://static.ak.facebook.com/connect/xd_arbiter/dgdTycPTSRj.js?version=40#cb=f564c1178",
-          // videoId = this.getQueryVariable(href, "v"),
-          embed = "https://www.facebook.com/plugins/post.php?app_id=&channel="+encodeURIComponent(channelSdk)+"&href="+encodeURIComponent(href)+"&sdk=joey&width="+this.settings[this.settings.service].width;
+          videoId = this.getQueryVariable(href, "v"),
+          photoUrl = "https://www.facebook.com/photo.php?v="+videoId,
+          embed = "https://www.facebook.com/plugins/post.php?app_id=&channel="+encodeURIComponent(channelSdk)+"\
+          &href="+encodeURIComponent(photoUrl)+"\
+          &sdk=joey&width="+this.settings[this.settings.service].width;
 
       // console.log(videoId);
       this.render(embed);
