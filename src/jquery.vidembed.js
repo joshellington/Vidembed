@@ -29,8 +29,8 @@
       height: 710
     },
     facebook: {
-      width: 550,
-      height: 450
+      width: 466,
+      height: 480
     }
   };
 
