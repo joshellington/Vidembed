@@ -27,6 +27,10 @@
     instagram: {
       width: 612,
       height: 710
+    },
+    facebook: {
+      width: 550,
+      height: 450
     }
   };
 
@@ -67,6 +71,9 @@
         } else if (href.indexOf("instagram") !== -1) {
           this.settings.service = "instagram";
           this.parseInstagram(href);
+        } else if (href.indexOf("facebook") !== -1) {
+          this.settings.service = "facebook";
+          this.parseFacebook(href);
         }
       } else {
         console.error("Missing href value.");
@@ -103,6 +110,30 @@
 
       // console.log(videoId);
       this.render(embed);
+    },
+
+    parseFacebook: function (href) {
+      // console.log(this.element, href);
+
+      var channelSdk = "http://static.ak.facebook.com/connect/xd_arbiter/dgdTycPTSRj.js?version=40#cb=f564c1178",
+          // videoId = this.getQueryVariable(href, "v"),
+          embed = "https://www.facebook.com/plugins/post.php?app_id=&channel="+encodeURIComponent(channelSdk)+"&href="+encodeURIComponent(href)+"&sdk=joey&width="+this.settings[this.settings.service].width;
+
+      // console.log(videoId);
+      this.render(embed);
+    },
+
+    getQueryVariable: function (string, variable) {
+      var vars = string.split("&"),
+          i = 0;
+      
+      for (i;i<vars.length;i++) {
+        if (vars[i].split("=")[0] === variable) {
+          return pair[1];
+        }
+      }
+
+      return(false);
     },
 
     render: function(embed) {
